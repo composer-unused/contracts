@@ -1,0 +1,25 @@
+<?php
+
+declare(strict_types=1);
+
+namespace ComposerUnused\Contracts;
+
+interface PackageInterface
+{
+    /**
+     * @phpstan-return array{psr-0?: array<string, string|string[]>, psr-4?: array<string, string|string[]>, classmap?: list<string>, files?: list<string>}
+     */
+    public function getAutoload(): array;
+
+    public function getName(): string;
+
+    /**
+     * @return array<LinkInterface>
+     */
+    public function getRequires(): array;
+
+    /**
+     * @return array<string>
+     */
+    public function getSuggests(): array;
+}
