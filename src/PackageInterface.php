@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace ComposerUnused\Contracts;
 
+use ComposerUnused\Contracts\Exception\LinkNotFoundException;
+
 interface PackageInterface
 {
     /**
@@ -22,4 +24,9 @@ interface PackageInterface
      * @return array<string>
      */
     public function getSuggests(): array;
+
+    /**
+     * @throws LinkNotFoundException
+     */
+    public function getRequire(string $name): LinkInterface;
 }
