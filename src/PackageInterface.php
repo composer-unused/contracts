@@ -14,6 +14,8 @@ interface PackageInterface
     public function getAutoload(): array;
 
     public function getName(): string;
+    
+    public function getUrl(): ?string;
 
     /**
      * @return array<LinkInterface>
